@@ -172,25 +172,8 @@ Route::get('/projects', function () {
             'title' => 'Affogato',
             'image' => 'https://res.cloudinary.com/dtgy66fxw/image/upload/v1660320830/affogatp_wybgcr.png',
             'desc' => 'A bistro application that allows users to search for different dishes',
-            'lang' => `HTML/CSS + Javascript`
+            'lang' => "HTML/CSS + Javascript"
         ],
     ]);
     return $projects;
 });
-
-
-// 0 => [
-
-//     'id'  => 1,
-//     'title' => 'Netflix Clone',
-//     'image' => 'https://res.cloudinary.com/dtgy66fxw/image/upload/v1660320830/netflix_mdbwgl.png',
-//     'desc' => 'A React application that allows users to search for movies and shows.',
-//     'lang' => 'React'
-// ],
-// 1 => [
-//     'id' => 2,
-//     'title' => 'Affogato',
-//     'image' => 'https://res.cloudinary.com/dtgy66fxw/image/upload/v1660320830/affogatp_wybgcr.png',
-//     'desc' => 'A bistro application that allows users to search for different dishes',
-//     'lang' => `HTML/CSS + Javascript`
-// ]
