@@ -31,33 +31,33 @@ Route::get('/types', function () {
     return $types;
 });
 
-Route::get('/projects', function () {
+// Route::get('/projects', function () {
 
-    $projects = Project::orderBy('created_at')->get();
+//     $projects = Project::orderBy('created_at')->get();
 
-    foreach ($projects as $key => $project) {
-        $projects[$key]['user'] = User::where('id', $project['user_id'])->first();
-        $projects[$key]['type'] = Type::where('id', $project['type_id'])->first();
+//     foreach ($projects as $key => $project) {
+//         $projects[$key]['user'] = User::where('id', $project['user_id'])->first();
+//         $projects[$key]['type'] = Type::where('id', $project['type_id'])->first();
 
-        if ($project['image']) {
-            $projects[$key]['image'] = env('APP_URL') . 'storage/' . $project['image'];
-        }
-    }
+//         if ($project['image']) {
+//             $projects[$key]['image'] = env('APP_URL') . 'storage/' . $project['image'];
+//         }
+//     }
 
-    return $projects;
-});
+//     return $projects;
+// });
 
-Route::get('/projects/profile/{project?}', function (Project $project) {
+// Route::get('/projects/profile/{project?}', function (Project $project) {
 
-    $project['user'] = User::where('id', $project['user_id'])->first();
-    $project['type'] = Type::where('id', $project['type_id'])->first();
+//     $project['user'] = User::where('id', $project['user_id'])->first();
+//     $project['type'] = Type::where('id', $project['type_id'])->first();
 
-    if ($project['image']) {
-        $project['image'] = env('APP_URL') . 'storage/' . $project['image'];
-    }
+//     if ($project['image']) {
+//         $project['image'] = env('APP_URL') . 'storage/' . $project['image'];
+//     }
 
-    return $project;
-});
+//     return $project;
+// });
 
 
 Route::get('/education', function () {
